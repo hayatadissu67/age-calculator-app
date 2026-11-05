@@ -33,41 +33,44 @@
     class="min-h-screen flex flex-col items-center justify-center bg-gray-100 font-[poppins]"
   >
     <div
-      class="flex justify-center items-left bg-white w-[450px] h-50 flex-col shadow-lg p-8 m-auto rounded-xl rounded-br-[100px]"
+      class="flex justify-center items-left bg-white w-[500px] h-50 flex-col shadow-lg p-8 m-auto rounded-xl rounded-br-[100px]"
     >
       <header class="flex items-left gap-4">
         <div>
-          <div class="text-sm font-bold text-gray-500 tracking-widest">Day</div>
+          <label id="day-label" class="text-sm font-bold text-gray-500 tracking-widest">Day</label>
           <div>
             <input
              id="day"
               type="number"
               placeholder="DD"
-              class="border border-gray-300 h-10 w-20 rounded pl-2"
+              class="border border-gray-300 h-10 w-[110px] rounded pl-2"
             />
           </div>
+          <p id="error-message-day" class="text-red-500 text-sm mt-1 hidden"> Must be a valid day</p>
         </div>
         <div>
-          <div class="text-sm font-bold text-gray-500 tracking-widest">Month</div>
+          <label id="month-label" class="text-sm font-bold text-gray-500 tracking-widest">Month</label>
           <div>
             <input
               id="month"
               type="number"
               placeholder="MM"
-              class="border border-gray-300 h-10 w-20 rounded pl-2"
+              class="border border-gray-300 h-10 w-[110px] rounded pl-2"
             />
           </div>
+          <p id="error-message2" class="text-red-500 text-sm mt-1 hidden"> Must be a valid month</p>
         </div>
         <div>
-          <div class="text-sm font-bold text-gray-500 tracking-widest">Year</div>
+          <label id="year-label" class="text-sm font-bold text-gray-500 tracking-widest">Year</label>
           <div>
             <input
               id="year"
               type="number"
               placeholder="YYYY"
-              class="border border-gray-300 h-10 w-20 rounded pl-2"
+              class="border border-gray-300 h-10 w-[110px] rounded pl-2"
             />
           </div>
+          <p id="error-message" class="text-red-500 text-sm mt-1 hidden"> Must be a valid year</p>
         </div>
       </header>
       <section class="flex flex-row justify-between items-center w-full">
@@ -81,15 +84,15 @@
       </section>
       <div class="flex flex-col ">
         <div class="flex flex-row  items-center w-full">
-          <div id="disyear" class="text-7xl font-bold text-purple-500">--</div>
+          <label id="disyear" class="text-7xl font-bold text-purple-500">--</label>
           <div class="text-5xl font-extrabold text-black-500 font-[Poppins]">years</div>
         </div>
         <div class="flex flex-row  items-center w-full">
-          <div id="dismonth" class="text-7xl font-bold text-purple-500">--</div>
+          <label id="dismonth" class="text-7xl font-bold text-purple-500">--</label>
           <div class="text-5xl font-extrabold text-black-500 font-[Poppins]">months</div>
         </div>
         <div class="flex flex-row  items-center w-full">
-          <div id="disday" class="text-7xl font-bold text-purple-500">--</div>
+          <label id="disday" class="text-7xl font-bold text-purple-500">--</label >
           <div class="text-5xl font-extrabold font-[Poppins] text-black-500" >days</div>
         </div>
       </div>
