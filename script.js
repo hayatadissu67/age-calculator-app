@@ -72,6 +72,17 @@ calculateBtn.addEventListener('click', () => {
   let ageMonths = currentDate.getMonth() - birthDate.getMonth();
   let ageDays = currentDate.getDate() - birthDate.getDate();
 
+  if (ageDays < 0) {
+    ageMonths--;
+    
+    const lastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+    ageDays += lastMonth.getDate();
+  }
+  if (ageMonths < 0) {
+    ageYears--;
+    ageMonths += 12;
+  } 
+
   disyear.textContent = ageYears;
   dismonth.textContent = ageMonths;
   disday.textContent = ageDays;
